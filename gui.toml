@@ -1,0 +1,21 @@
+[gui]
+    title = "Dividi i pdf"
+    icon_img = "pdf_file.svg"
+
+[split_pdf_gui]
+    empty_msg = "Sposta qui il PDF da dividere"
+    empty_img = "new.svg"
+    drag_and_drop_msg = "Lascia qui il file"
+    drag_and_drop_img = "add_file.svg"
+    ready_msg = "File selezionato, dividiamo?"
+    ready_img = "pdf_file.svg"
+    done_msg = "PDF diviso - Clicca per aprire la cartella"
+    done_img = "done.svg"
+    invalid_msg = "File non supportato, scegli un PDF"
+    invalid_img = "wrong_file.svg"
+    action_btn = "VAI"
+    action_color = "green"
+    cancel_btn = "Annulla"
+    cancel_color = "#9DA4C4"
+    restart_btn = "Ricomincia"
+    restart_color = "#DC851F"
