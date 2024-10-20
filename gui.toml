@@ -1,8 +1,16 @@
 [gui]
-    title = "Dividi i pdf"
+    title = "Unisci e dividi PDF"
     icon_img = "pdf_file.svg"
 
+[select_gui]
+    join_msg = "Unisci PDF"
+    join_img = "join_icon.svg"
+    split_msg = "Dividi PDF"
+    split_img = "split_icon.svg"
+    background_color = "#caf0f8"
+
 [split_pdf_gui]
+    background_color = "#ff7d00"
     empty_msg = "Sposta qui il PDF da dividere"
     empty_img = "new.svg"
     drag_and_drop_msg = "Lascia qui il file"
@@ -19,3 +27,5 @@
     cancel_color = "#9DA4C4"
     restart_btn = "Ricomincia"
     restart_color = "#DC851F"
+
+[]

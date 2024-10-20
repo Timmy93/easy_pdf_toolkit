@@ -6,16 +6,15 @@ from PyQt6.QtCore import Qt
 from PdfEditor import PdfEditor
 
 
-class DragDropWindow(QWidget):
+class JoinPdfWidget(QWidget):
 
-    def __init__(self, gui_info, pdf_editor: PdfEditor):
+    def __init__(self, gui_info, main_window):
         super().__init__()
-        self.file = {}
-        self.pdf_editor = pdf_editor
+        self.main_window = main_window
+        self.files = []
+        self.pdf_editor = PdfEditor()
         self.info = gui_info
-        self.setWindowTitle(gui_info["gui"]["title"])
-        self.setWindowIcon(QIcon(os.path.join("icons", self.info["gui"]["icon_img"])))
-        self.setGeometry(300, 300, 600, 200)
+
         self.setAcceptDrops(True)
         self.setStyleSheet("background-color: white;")
 
@@ -83,7 +82,7 @@ class DragDropWindow(QWidget):
 
     def set_image(self, image_path):
         """Set the image to the given file."""
-        image_path = os.path.join("icons", image_path)
+        image_path = os.path.join("../icons", image_path)
         pixmap = QPixmap(image_path)
         self.image_label.setPixmap(pixmap.scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio))
 
