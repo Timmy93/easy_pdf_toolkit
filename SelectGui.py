@@ -1,9 +1,8 @@
 import os
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QStackedWidget
 
-from PyQt6.QtCore import QSize
-from PyQt6.QtGui import QIcon, QFont
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QStackedWidget
-
+from Widgets.ActionWidget import ActionWidget
 from Widgets.JoinPdfWidget import JoinPdfWidget
 from Widgets.SelectActionWidget import SelectActionWidget
 from Widgets.SplitPdfWidget import SplitPdfWidget
@@ -34,11 +33,12 @@ class SelectGui(QWidget):
 
     def switch_to_split_pdf(self):
         """Switch to the Split PDF layout."""
-        self.stacked_widget.setCurrentWidget(self.split_pdf_widget)
+        self.switch_to_widget(self.split_pdf_widget)
 
     def switch_to_join_pdf(self):
         """Switch to the Join PDF layout."""
-        self.stacked_widget.setCurrentWidget(self.join_pdf_widget)
+        self.switch_to_widget(self.join_pdf_widget)
 
-    def get_image_path(self, section, name):
-        return os.path.join("icons", self.info[section][name])
+    def switch_to_widget(self, widget: ActionWidget):
+        self.stacked_widget.setCurrentWidget(widget)
+        widget.change_background()

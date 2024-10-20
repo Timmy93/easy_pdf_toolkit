@@ -7,20 +7,9 @@
     join_img = "join_icon.svg"
     split_msg = "Dividi PDF"
     split_img = "split_icon.svg"
-    background_color = "#caf0f8"
+    background_color = "#fffffc"
 
-[split_pdf_gui]
-    background_color = "#ff7d00"
-    empty_msg = "Sposta qui il PDF da dividere"
-    empty_img = "new.svg"
-    drag_and_drop_msg = "Lascia qui il file"
-    drag_and_drop_img = "add_file.svg"
-    ready_msg = "File selezionato, dividiamo?"
-    ready_img = "pdf_file.svg"
-    done_msg = "PDF diviso - Clicca per aprire la cartella"
-    done_img = "done.svg"
-    invalid_msg = "File non supportato, scegli un PDF"
-    invalid_img = "wrong_file.svg"
+[generic_action_gui]
     action_btn = "VAI"
     action_color = "green"
     cancel_btn = "Annulla"
@@ -28,4 +17,26 @@
     restart_btn = "Ricomincia"
     restart_color = "#DC851F"
 
-[]
+[split_pdf_gui]
+    background_color = "#caffbf"
+    empty_msg = "Sposta qui il PDF da dividere"
+    empty_img = "empty.svg"
+#    empty_img = "new.svg"
+    drag_and_drop_msg = "Lascia qui il file"
+    drag_and_drop_img = "add_file_2.svg"
+    ready_msg = "File selezionato, dividiamo?"
+    ready_img = "pdf_file_2.svg"
+    done_msg = "PDF diviso"
+    done_img = "done.svg"
+    invalid_msg = "File non supportato, scegli un PDF"
+    invalid_img = "wrong_file.svg"
+
+[join_pdf_gui]
+    background_color = "#e2eafc"
+    empty_msg = "Sposta qui i PDF da unire"
+    empty_img = "empty.svg"
+    full_img = "full_dir.svg"
+    drag_and_drop_msg = "Lascia qui il file"
+    drag_and_drop_img = "add_file_2.svg"
+    done_msg = "PDF creato"
+    done_img = "done.svg"
